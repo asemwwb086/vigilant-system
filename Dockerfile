@@ -899,7 +899,7 @@ RUN \
 
 # make sure binaries has no dependencies, is relro, pie and stack nx
 COPY checkelf /
-RUN \
+RUN chmod +x /checkelf && \
   /checkelf /usr/local/bin/ffmpeg && \
   /checkelf /usr/local/bin/ffprobe
 
